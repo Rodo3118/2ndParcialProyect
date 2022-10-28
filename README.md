@@ -1,2 +1,2 @@
 # 2ndParcialProyect
-El proyecto del segundo parcial
+El proyecto del segundo parcial muy bueno
