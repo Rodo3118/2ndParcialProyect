@@ -24,7 +24,7 @@ void lectura(string hola){
     while(!archivo.eof()){
     getline(archivo,text);
     cout<<text<<endl;
-    delay(2);                         
+    //delay(2);                         
     }
     archivo.close();
     
@@ -75,14 +75,43 @@ void chose_milk()
     switch(aux)
     {
         case 1:
-        lectura("zWhiskeyT.txt");
+        lectura("z4ChocomilkS.txt");
         break;
         case 2:
-        lectura("zWhiskeyT.txt");
+        lectura("z4ChocomilkB.txt");
         break;
         case 3:
-        lectura("zWhiskeyT.txt");
+        lectura("z4MatchaL.txt");
         break;
+        default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
+    }
+}
+void chose_coffee()
+{
+    int aux;
+    cin>>aux;
+    switch(aux)
+    {
+        case 1:
+        lectura("z5Espresso.txt");
+        break;
+        case 2:
+        lectura("z5AmericanC.txt");
+        break;
+        case 3:
+        lectura("z5Capuccino.txt");
+        break;
+        case 4:
+        lectura("z5Frappe.txt");
+        break;
+        default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
+
     }
 }
 void chose_alcohol()
@@ -108,6 +137,10 @@ void chose_alcohol()
                 case 4:
                 lectura("zWhiskeyO.txt");
                 break;
+                default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
             }
         break;
         case 2:
@@ -127,6 +160,10 @@ void chose_alcohol()
                 case 4:
                 lectura("z1MargaritaC.txt");
                 break;
+                default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
             }
         break;
         case 3:
@@ -146,6 +183,10 @@ void chose_alcohol()
                 case 4:
                 lectura("z2Daiquiri.txt");
                 break;
+                default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
             }
         break;
         case 4:
@@ -165,8 +206,16 @@ void chose_alcohol()
                 case 4:
                 lectura("z3JustT.txt");
                 break;
+                default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
             }
         break;
+        default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
+
     }
 }
     
@@ -230,8 +279,7 @@ void menu_coffee()
     cout<<" 2. American Coffee "<<endl;
     cout<<" 3. Cappuccino "<<endl;
     cout<<" 4. Frappe "<<endl;
-    cout<<" 5. Iced Coffee "<<endl;
-    //chose_coffee();
+    chose_coffee();
 
 }
 

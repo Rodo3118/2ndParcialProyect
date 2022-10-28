@@ -46,6 +46,9 @@ while(x>0)
         case 5:
         menu_coffee(); 
         break;
+        default:
+        cout<<"Please enter a valid number"<<endl;
+        break;
     }
 }
     
