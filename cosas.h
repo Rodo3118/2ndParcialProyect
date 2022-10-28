@@ -1,6 +1,34 @@
 #include <iostream>
+#include <string.h>
+#include <fstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include<ctime>
 
 using namespace std;
+void delay(int secs) {
+  for(int i = (time(NULL) + secs); time(NULL) != i; time(NULL));
+}
+
+void lectura(string hola){
+    ifstream archivo;
+    string nombre,text;
+    
+
+    archivo.open(hola,ios::in);
+    if(archivo.fail())
+    {
+        cout<<"Algo salio mal"<<endl;
+    }
+
+    while(!archivo.eof()){
+    getline(archivo,text);
+    cout<<text<<endl;
+    delay(2);                         
+    }
+    archivo.close();
+    
+}
 void menu_whisky()
 {
     cout<<"How would you like your Whiskey?"<<endl;
@@ -24,7 +52,7 @@ void menu_tequila()
 void menu_ron()
 {
     cout<<"How would you like your Ron?"<<endl;
-    cout<<" 1. Piña Colada"<<endl;
+    cout<<" 1. Pina Colada"<<endl;
     cout<<" 2. Mojito "<<endl;
     cout<<" 3. Cuba Libre "<<endl;
     cout<<" 4. Daiquiri "<<endl;
@@ -33,21 +61,29 @@ void menu_ron()
 
 void menu_beer()
 {
-    cout<<"How would you like your Coffee?"<<endl;
+    cout<<"How would you like your Beer?"<<endl;
     cout<<" 1. Black Velvet"<<endl;
-    cout<<" 2. Cóctel Mónaco "<<endl;
+    cout<<" 2. Coctel Monaco "<<endl;
     cout<<" 3. Michelada "<<endl;
     cout<<" 4. Just the Beer "<<endl;
     }
 
-void menu_x()
+void chose_milk()
 {
-    cout<<"How would you like your Coffee?"<<endl;
-    cout<<" 1. Espresso"<<endl;
-    cout<<" 2. American Coffee "<<endl;
-    cout<<" 3. Cappuccino "<<endl;
-    cout<<" 4. Frappe "<<endl;
-    cout<<" 5. Iced Coffee "<<endl;
+    int aux;
+    cin>>aux;
+    switch(aux)
+    {
+        case 1:
+        lectura("zWhiskeyT.txt");
+        break;
+        case 2:
+        lectura("zWhiskeyT.txt");
+        break;
+        case 3:
+        lectura("zWhiskeyT.txt");
+        break;
+    }
 }
 void chose_alcohol()
 {
@@ -61,12 +97,16 @@ void chose_alcohol()
             switch(auxdos)
             {
                 case 1:
+                lectura("zWhiskeyT.txt");
                 break;
                 case 2:
+                lectura("zJohnC.txt");
                 break;
                 case 3:
+                lectura("zCafeI.txt");
                 break;
                 case 4:
+                lectura("zWhiskeyO.txt");
                 break;
             }
         break;
@@ -76,13 +116,16 @@ void chose_alcohol()
             switch(auxdos)
             {
                 case 1:
-                
+                lectura("z1CharroN.txt");
                 break;
                 case 2:
+                lectura("z1Mojito.txt");
                 break;
                 case 3:
+                lectura("z1PalomaR.txt");
                 break;
                 case 4:
+                lectura("z1MargaritaC.txt");
                 break;
             }
         break;
@@ -92,12 +135,16 @@ void chose_alcohol()
             switch(auxdos)
             {
                 case 1:
+                lectura("z2PinaC.txt");
                 break;
                 case 2:
+                lectura("z2Mojito.txt");
                 break;
                 case 3:
+                lectura("z2CubaL.txt");
                 break;
                 case 4:
+                lectura("z2Daiquiri.txt");
                 break;
             }
         break;
@@ -107,12 +154,16 @@ void chose_alcohol()
             switch(auxdos)
             {
                 case 1:
+                lectura("z3BlackV.txt");
                 break;
                 case 2:
+                lectura("z3CoctelM.txt");
                 break;
                 case 3:
+                lectura("z3Michelada.txt");
                 break;
                 case 4:
+                lectura("z3JustT.txt");
                 break;
             }
         break;
@@ -135,7 +186,7 @@ void menu_alcohol()
 {
     cout<<" 1. Whisky "<<endl;
     cout<<" 2. Tequila "<<endl;
-    cout<<" 3. Ron "<<endl;
+    cout<<" 3. Rum "<<endl;
     cout<<" 4. Beer "<<endl;
     chose_alcohol();
 
@@ -149,6 +200,7 @@ void menu_soda()
     cout<<" 3. 7Up or Sprite "<<endl;
     cout<<" 4. Grapefruit soda (Fresca) "<<endl;
     cout<<" 5. Dr. Pepper "<<endl;
+    //chose_soda();
 }
 
 void menu_fruit()
@@ -158,6 +210,7 @@ void menu_fruit()
     cout<<" 2. Pineapple "<<endl;
     cout<<" 3. Watermelon "<<endl;
     cout<<" 4. Lemon "<<endl;
+    //chose_fruit();
 }
 
 void menu_milk()
@@ -166,6 +219,7 @@ void menu_milk()
     cout<<" 1. Chocomilk (Simple) "<<endl;
     cout<<" 2. Chocomilk (With Banana) "<<endl;
     cout<<" 3. Matcha Latte "<<endl;
+    chose_milk();
 
 }
 
@@ -177,6 +231,8 @@ void menu_coffee()
     cout<<" 3. Cappuccino "<<endl;
     cout<<" 4. Frappe "<<endl;
     cout<<" 5. Iced Coffee "<<endl;
+    //chose_coffee();
+
 }
 
 

@@ -2,7 +2,9 @@
 #include <iostream>
 #include "cosas.h"
 #include "Principales.h"
-
+#include <stdlib.h>
+#include <string.h>
+#include <fstream>
 using namespace std;
 
 
@@ -23,6 +25,9 @@ int main()
 
     
         cin>>x;
+while(x>0)
+{
+     cin>>x;
 
         switch(x)
     {
@@ -42,6 +47,6 @@ int main()
         menu_coffee(); 
         break;
     }
-
+}
     
 }
